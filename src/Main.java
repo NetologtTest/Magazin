@@ -12,18 +12,19 @@ class Main {
 
 
     public static void countingTop() {
-        Weapon top1 = null;
-        Weapon top2 = null;
-        Weapon top3 = null;
+        Weapon top1 = list.get(0);
+        Weapon top2 = list.get(0);
+        Weapon top3 = list.get(0);
         for (int i = 0; i < list.size(); i++) {
             if (top1.getEstimation() < list.get(i).getEstimation()) {
                 top3 = top2;
                 top2 = top1;
                 top1 = list.get(i);
             }
-            System.out.println("Топ1: " + top1.getName());
-            System.out.println("Топ2: " + top2.getName());
-            System.out.println("Топ3: " + top3.getName());
+        }
+        System.out.println("Топ1: " + top1.getName());
+        System.out.println("Топ2: " + top2.getName());
+        System.out.println("Топ3: " + top3.getName());
         }
     }
 
